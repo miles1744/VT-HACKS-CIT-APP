@@ -42,3 +42,153 @@ Error processing the message:  ReferenceError: sendMessageWithDelay is not defin
 Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
     at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:78:5)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:59:5)
+    at Client.emit (node:events:519:28)
+    at MessageCreateAction.handle (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/actions/MessageCreate.js:28:14)
+    at module.exports [as MESSAGE_CREATE] (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:232:12)
+    at WebSocketManager.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
+    at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
+Error processing the message:  DiscordAPIError[10008]: Unknown Message
+    at handleErrors (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1128:23)
+    at async SequentialHandler.queueRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:959:14)
+    at async _REST.request (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async GuildMessageManager.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/managers/MessageManager.js:267:5)
+    at async Message.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/structures/Message.js:896:5)
+    at async Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:75:5) {
+  requestBody: { files: undefined, json: undefined },
+  rawError: { message: 'Unknown Message', code: 10008 },
+  code: 10008,
+  status: 404,
+  method: 'DELETE',
+  url: 'https://discord.com/api/v10/channels/1284393897165979716/messages/1284629683392217089'
+}
+Error processing the message:  DiscordAPIError[10008]: Unknown Message
+    at handleErrors (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1128:23)
+    at async SequentialHandler.queueRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:959:14)
+    at async _REST.request (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async GuildMessageManager.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/managers/MessageManager.js:267:5)
+    at async Message.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/structures/Message.js:896:5)
+    at async Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:75:5) {
+  requestBody: { files: undefined, json: undefined },
+  rawError: { message: 'Unknown Message', code: 10008 },
+  code: 10008,
+  status: 404,
+  method: 'DELETE',
+  url: 'https://discord.com/api/v10/channels/1284393897165979716/messages/1284629720587046942'
+}
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:59:5)
+    at Client.emit (node:events:519:28)
+    at MessageCreateAction.handle (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/actions/MessageCreate.js:28:14)
+    at module.exports [as MESSAGE_CREATE] (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:232:12)
+    at WebSocketManager.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
+    at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
+Error processing the message:  DiscordAPIError[10008]: Unknown Message
+    at handleErrors (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1128:23)
+    at async SequentialHandler.queueRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:959:14)
+    at async _REST.request (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async GuildMessageManager.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/managers/MessageManager.js:267:5)
+    at async Message.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/structures/Message.js:896:5)
+    at async Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:75:5) {
+  requestBody: { files: undefined, json: undefined },
+  rawError: { message: 'Unknown Message', code: 10008 },
+  code: 10008,
+  status: 404,
+  method: 'DELETE',
+  url: 'https://discord.com/api/v10/channels/1284393897165979716/messages/1284629800308310038'
+}
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:78:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:78:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:59:5)
+    at Client.emit (node:events:519:28)
+    at MessageCreateAction.handle (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/actions/MessageCreate.js:28:14)
+    at module.exports [as MESSAGE_CREATE] (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:232:12)
+    at WebSocketManager.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
+    at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:59:5)
+    at Client.emit (node:events:519:28)
+    at MessageCreateAction.handle (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/actions/MessageCreate.js:28:14)
+    at module.exports [as MESSAGE_CREATE] (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:232:12)
+    at WebSocketManager.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
+    at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:78:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:78:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:78:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error processing the message:  DiscordAPIError[10008]: Unknown Message
+    at handleErrors (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1128:23)
+    at async SequentialHandler.queueRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:959:14)
+    at async _REST.request (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async GuildMessageManager.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/managers/MessageManager.js:267:5)
+    at async Message.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/structures/Message.js:896:5)
+    at async Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:75:5) {
+  requestBody: { files: undefined, json: undefined },
+  rawError: { message: 'Unknown Message', code: 10008 },
+  code: 10008,
+  status: 404,
+  method: 'DELETE',
+  url: 'https://discord.com/api/v10/channels/1284393897165979716/messages/1284630920850178200'
+}
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:59:5)
+    at Client.emit (node:events:519:28)
+    at MessageCreateAction.handle (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/actions/MessageCreate.js:28:14)
+    at module.exports [as MESSAGE_CREATE] (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:232:12)
+    at WebSocketManager.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
+    at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
+Error processing the message:  DiscordAPIError[10008]: Unknown Message
+    at handleErrors (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1128:23)
+    at async SequentialHandler.queueRequest (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:959:14)
+    at async _REST.request (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async GuildMessageManager.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/managers/MessageManager.js:267:5)
+    at async Message.delete (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/structures/Message.js:896:5)
+    at async Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:75:5) {
+  requestBody: { files: undefined, json: undefined },
+  rawError: { message: 'Unknown Message', code: 10008 },
+  code: 10008,
+  status: 404,
+  method: 'DELETE',
+  url: 'https://discord.com/api/v10/channels/1284393897165979716/messages/1284631092388827198'
+}
