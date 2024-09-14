@@ -52,7 +52,8 @@ client.on('ready', (c) => {
 
 // Event handler for new messages
 client.on('messageCreate', async (message) => {
-  if (message.author.bot) return; // Ignore messages from bot
+  try{
+    if (message.author.bot) return; // Ignore messages from bot
 
   if (message.content === 'hello'){
     await sendMessageWithDelay(message.channel,'hey miles negesh thomas!');
@@ -83,6 +84,14 @@ client.on('messageCreate', async (message) => {
 
     // Send a warning message
     sendMessageWithDelay(message.channel,`${message.author}, please refrain from using toxicity.`);
+  }
+
+  }
+  
+  
+  catch(err){
+    console.error('Error processing the message: ', err);
+
   }
 });
 
