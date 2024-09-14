@@ -10,7 +10,7 @@ const client = new Client({
     ],
 })
 
-client.login(config.token)
+client.login(config.token);
 
 // const {google} = require('googleapis');
 
