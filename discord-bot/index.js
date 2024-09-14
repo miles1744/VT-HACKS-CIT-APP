@@ -10,7 +10,7 @@ const client = new Client({
     ],
 })
 
-client.login(DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN);
 
 // const {google} = require('googleapis');
 
