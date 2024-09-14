@@ -58,3 +58,4 @@ client.on('messageCreate', async (message) => {
 
 // Login the bot
 client.login(process.env.DISCORD_TOKEN);
+
