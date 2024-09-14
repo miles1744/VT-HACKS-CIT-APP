@@ -9,7 +9,6 @@ const client = new Client({
     ],
 })
 
-
 const {google} = require('googleapis');
 
 API_KEY = '';
