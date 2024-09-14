@@ -65,7 +65,7 @@ client.on('messageCreate', async (message) => {
   }
 
   if (message.content === 'miles'){
-    await sendMessageWithDelay(message.channel,'miles i like ur butt - discord');
+    await sendMessageWithDelay(message.channel,'miles i like ur gyatt - discord');
   }
 
   const content = message.content;
@@ -85,15 +85,14 @@ client.on('messageCreate', async (message) => {
     // Send a warning message
     sendMessageWithDelay(message.channel, `${message.author}, please refrain from using profanity.`);
   }
-
-  if (toxicityScore > 0.2) {
+  else if (toxicityScore > 0.2) {
     // Optionally, delete the message
     await message.delete();
 
     // Send a warning message
     sendMessageWithDelay(message.channel,`${message.author}, please refrain from using toxicity.`);
   }
-
+  
   }
   
   
