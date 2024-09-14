@@ -8,7 +8,7 @@ const client = new Client({
         IntentsBitField.Flags.GuildMessages,
         IntentsBitField.Flags.MessageContent
     ],
-})
+});
 
 client.login(process.env.DISCORD_TOKEN);
 

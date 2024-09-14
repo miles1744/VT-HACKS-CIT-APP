@@ -1,6 +1,6 @@
 //require('dotenv').config();
 require('dotenv').config(); // Load .env variables
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, IntentsBitField } = require('discord.js');
 const axios = require('axios');
 
 const client = new Client({
@@ -46,8 +46,8 @@ async function analyzeMessage(content) {
 }
 
 // Event handler when the bot is ready
-client.once('ready', () => {
-  console.log(`Logged in as ${client.user.tag}`);
+client.on('ready', (c) => {
+  console.log(`${c.user.tag} is Online.`);
 });
 
 // Event handler for new messages
