@@ -50,6 +50,11 @@ client.on('ready', (c) => {
   console.log(`${c.user.tag} is Online.`);
 });
 
+async function sendMessageWithDelay(channel, content, delay = 1000) {
+  await new Promise(resolve => setTimeout(resolve, delay));
+  await channel.send(content);
+}
+
 // Event handler for new messages
 client.on('messageCreate', async (message) => {
   try{
