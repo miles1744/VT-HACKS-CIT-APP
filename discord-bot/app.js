@@ -46,7 +46,7 @@ async function analyzeMessage(content) {
 }
 
 // Event handler when the bot is ready
-client.on('ready', (c) => {
+client.once('ready', (c) => {
   console.log(`${c.user.tag} is Online.`);
 });
 
@@ -56,7 +56,7 @@ async function sendMessageWithDelay(channel, content, delay = 1000) {
 }
 
 // Event handler for new messages
-client.on('messageCreate', async (message) => {
+client.once('messageCreate', async (message) => {
   try{
     if (message.author.bot) return; // Ignore messages from bot
 
