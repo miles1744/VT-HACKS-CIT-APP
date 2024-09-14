@@ -5,12 +5,10 @@ const client = new Client({
         IntentsBitField.Flags.Guilds, 
         IntentsBitField.Flags.GuildMembers,
         IntentsBitField.Flags.GuildMessages,
-        IntentsBitField.Flags.MessageContent,
         IntentsBitField.Flags.MessageContent
     ],
 })
 
-client.login('MTI4NDM5NDYyMjg4OTc1NDYyNg.G9rud7.pImnmE0p2QKHu-utB8A9y4XC_bTXyWrg9C593M')
 
 const {google} = require('googleapis');
 
@@ -42,4 +40,3 @@ google.discoverAPI(DISCOVERY_URL)
     .catch(err => {
       throw err;
     });
-
