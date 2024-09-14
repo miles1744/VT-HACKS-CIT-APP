@@ -50,12 +50,17 @@ client.on('ready', (c) => {
   console.log(`${c.user.tag} is Online.`);
 });
 
+async function sendMessageWithDelay(channel, content, delay = 1000) {
+  await new Promise(resolve => setTimeout(resolve, delay));
+  await channel.send(content);
+}
+
 // Event handler for new messages
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return; // Ignore messages from bot
 
   if (message.content === 'hello'){
-    await message.channel.send('hey miles negesh thomas!');
+    await sendMessageWithDelay(message.channel,'hey miles negesh thomas!');
   }
 
 
@@ -74,7 +79,7 @@ client.on('messageCreate', async (message) => {
     await message.delete();
 
     // Send a warning message
-    message.channel.send(message.channel, `${message.author}, please refrain from using profanity.`);
+    sendMessageWithDelay(message.channel, `${message.author}, please refrain from using profanity.`);
   }
 
   if (toxicityScore > 0.2) {
@@ -82,7 +87,7 @@ client.on('messageCreate', async (message) => {
     await message.delete();
 
     // Send a warning message
-    message.channel.send(message.channel,`${message.author}, please refrain from using toxicity.`);
+    sendMessageWithDelay(message.channel,`${message.author}, please refrain from using toxicity.`);
   }
 });
 
