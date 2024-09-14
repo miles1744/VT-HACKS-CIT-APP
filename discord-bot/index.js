@@ -1,5 +1,5 @@
 const { Client, IntentsBitField } = require('discord.js');
-const config = require('./config.json');
+require('dotenv').config();
 
 const client = new Client({
     intents: [
@@ -10,7 +10,7 @@ const client = new Client({
     ],
 })
 
-client.login(config.token);
+client.login(DISCORD_TOKEN);
 
 // const {google} = require('googleapis');
 

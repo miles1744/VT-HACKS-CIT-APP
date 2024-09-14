@@ -1,60 +1,61 @@
-
-
-require('dotenv').config();
+//require('dotenv').config();
+require('dotenv').config(); // Load .env variables
+const { Client, GatewayIntentBits } = require('discord.js');
 const axios = require('axios');
 
-const api_key_link = process.env.DISCORD_API_KEY
+const client = new Client({
+  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
+});
 
-const {google} = require('googleapis');
+const DISCORD_API_KEY = process.env.DISCORD_API_KEY;
 
-async function analyzeKey(text){
-    const url_analyze = 'https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=' + api_key_link;
-    try {
-        const response = await axios.post(url_analyze, {
-          comment: {
-            text: text,
-          },
-          languages: ['en'], // Specify the language of the text (e.g., 'en' for English)
-          requestedAttributes: {
-            TOXICITY: {}, // You can request multiple attributes like INSULT, PROFANITY, etc.
-          },
-        });
-    
-        // Log the API response
-        const toxicityScore = response.data.attributeScores.TOXICITY.summaryScore.value;
-        console.log(`Toxicity score: ${toxicityScore}`);
-      } catch (error) {
-        console.error('Error analyzing text:', error.response ? error.response.data : error.message);
-      }
-    }
-    
-// Example usage
-const textToAnalyze = 'This is a very toxic comment!';
-analyzeKey(textToAnalyze);
+// Function to analyze messages for profanity
+async function analyzeMessage(content) {
+  const url = `https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=${DISCORD_API_KEY}`;
 
+  try {
+    const response = await axios.post(url, {
+      comment: {
+        text: content,
+      },
+      languages: ['en'], // Specify the language of the message
+      requestedAttributes: {
+        PROFANITY: {}, // Check for profanity
+      },
+    });
 
-// google.discoverAPI(url_analyze)
-//     .then(client => {
-//       const analyzeRequest = {
-//         comment: {
-//           text: 'Jiminy cricket! Well gosh durned it! Oh damn it all!',
-//         },
-//         requestedAttributes: {
-//           TOXICITY: {},
-//         },
-//       };
+    // Extract the profanity score from the response
+    const profanityScore = response.data.attributeScores.PROFANITY.summaryScore.value;
+    return profanityScore;
 
-//       client.comments.analyze(
-//           {
-//             key: API_KEY,
-//             resource: analyzeRequest,
-//           },
-//           (err, response) => {
-//             if (err) throw err;
-//             console.log(JSON.stringify(response.data, null, 2));
-//           });
-//     })
-//     .catch(err => {
-//       throw err;
-//     });
+  } catch (error) {
+    console.error('Error analyzing message:', error.response ? error.response.data : error.message);
+    return null;
+  }
+}
+
+// Event handler when the bot is ready
+client.once('ready', () => {
+  console.log(`Logged in as ${client.user.tag}`);
+});
+
+// Event handler for new messages
+client.on('messageCreate', async (message) => {
+  if (message.author.bot) return; // Ignore messages from bots
+
+  const content = message.content;
+  const profanityScore = await analyzeMessage(content);
+
+  // Define a threshold for detecting profanity (e.g., score > 0.7)
+  if (profanityScore > 0.7) {
+    // Optionally, delete the message
+    await message.delete();
+
+    // Send a warning message
+    message.channel.send(`${message.author}, please refrain from using profanity.`);
+  }
+});
+
+// Login the bot
+client.login(process.env.DISCORD_TOKEN);
 
