@@ -50,7 +50,7 @@ client.on('ready', (c) => {
   console.log(`${c.user.tag} is Online.`);
 });
 
-async function sendMessageWithDelay(channel, content, delay = 1000) {
+async function sendMessageWithDelay(channel, content, delay = 500) {
   await new Promise(resolve => setTimeout(resolve, delay));
   await channel.send(content);
 }
@@ -64,6 +64,9 @@ client.on('messageCreate', async (message) => {
     await sendMessageWithDelay(message.channel,`Hey, ${message.author}!`);
   }
 
+  if (message.content === 'miles'){
+    await sendMessageWithDelay(message.channel,'miles i like ur butt - discord');
+  }
 
   const content = message.content;
   const scores = await analyzeMessage(content);
