@@ -61,7 +61,7 @@ client.on('messageCreate', async (message) => {
     if (message.author.bot) return; // Ignore messages from bot
 
   if (message.content === 'hello'){
-    await sendMessageWithDelay(message.channel,'hey miles negesh thomas!');
+    await sendMessageWithDelay(message.channel,`Hey, ${message.author}!`);
   }
 
 
