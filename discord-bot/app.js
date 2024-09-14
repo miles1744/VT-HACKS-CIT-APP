@@ -6,17 +6,18 @@ const axios = require('axios');
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds, 
-      IntentsBitField.Flags.GuildMembers,
-      IntentsBitField.Flags.GuildMessages,
-      IntentsBitField.Flags.MessageContent
+    IntentsBitField.Flags.GuildMembers,
+    IntentsBitField.Flags.GuildMessages,
+    IntentsBitField.Flags.MessageContent
   ],
 });
+
 
 const DISCORD_API_KEY = process.env.DISCORD_API_KEY;
 
 // Function to analyze messages for profanity
 async function analyzeMessage(content) {
-  const url = 'https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=${DISCORD_API_KEY}';
+  const url = `https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=${DISCORD_API_KEY}`;
 
   try {
     const response = await axios.post(url, {
@@ -32,10 +33,11 @@ async function analyzeMessage(content) {
 
     // Extract the profanity score from the response
     const profanityScore = response.data.attributeScores.PROFANITY.summaryScore.value;
-    return profanityScore;
-    
     const toxicityScore = response.data.attributeScores.TOXICITY.summaryScore.value;
-    return toxicityScore;
+    return {profanityScore, toxicityScore};
+    
+    
+
 
   } catch (error) {
     console.error('Error analyzing message:', error.response ? error.response.data : error.message);
@@ -50,11 +52,21 @@ client.once('ready', () => {
 
 // Event handler for new messages
 client.on('messageCreate', async (message) => {
-  if (message.author.bot) return; // Ignore messages from bots
+  if (message.author.bot) return; // Ignore messages from bot
+
+  if (message.content === 'hello'){
+    message.reply('hey miles negesh thomas!');
+  }
+
 
   const content = message.content;
-  const profanityScore = await analyzeMessage(content);
-  const toxicityScore = await analyzeMessage(content);
+  const scores = await analyzeMessage(content);
+
+  if (scores == null) return;
+
+  const { profanityScore, toxicityScore } = scores;
+
+  
 
   // Define a threshold for detecting profanity (e.g., score > 0.7)
   if (profanityScore > 0.2) {
@@ -62,7 +74,7 @@ client.on('messageCreate', async (message) => {
     await message.delete();
 
     // Send a warning message
-    message.channel.send(`${message.author}, please refrain from using profanity.`);
+    message.reply(`${message.author}, please refrain from using profanity.`);
   }
 
   if (toxicityScore > 0.2) {
@@ -70,7 +82,7 @@ client.on('messageCreate', async (message) => {
     await message.delete();
 
     // Send a warning message
-    message.channel.send(`${message.author}, please refrain from using toxicity.`);
+    message.reply(`${message.author}, please refrain from using toxicity.`);
   }
 });
 
