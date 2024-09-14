@@ -65,12 +65,15 @@ client.on('messageCreate', async (message) => {
   }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   if (message.content === 'miles'){
     await sendMessageWithDelay(message.channel,'miles i like ur gyatt - discord');
   }
 =======
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> Stashed changes
   const content = message.content;
   const scores = await analyzeMessage(content);
 
@@ -88,13 +91,13 @@ client.on('messageCreate', async (message) => {
     // Send a warning message
     sendMessageWithDelay(message.channel, `${message.author}, please refrain from using profanity.`);
   }
-  else if (toxicityScore > 0.2) {
-    // Optionally, delete the message
-    await message.delete();
+  // else if (toxicityScore > 0.2) {
+  //   // Optionally, delete the message
+  //   await message.delete();
 
-    // Send a warning message
-    sendMessageWithDelay(message.channel,`${message.author}, please refrain from using toxicity.`);
-  }
+  //   // Send a warning message
+  //   sendMessageWithDelay(message.channel,`${message.author}, please refrain from using toxicity.`);
+  // }
   
   }
   

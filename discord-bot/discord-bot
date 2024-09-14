@@ -338,3 +338,30 @@ Error processing the message:  ReferenceError: sendMessageWithDelay is not defin
     at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
     at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
     at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
+Error analyzing message: {
+  error: {
+    code: 429,
+    message: "Quota exceeded for quota metric 'Analysis requests (AnalyzeComment)' and limit 'Analysis requests (AnalyzeComment) per minute' of service 'commentanalyzer.googleapis.com' for consumer 'project_number:999858186770'.",
+    status: 'RESOURCE_EXHAUSTED',
+    details: [ [Object], [Object] ]
+  }
+}
+Error analyzing message: {
+  error: {
+    code: 429,
+    message: "Quota exceeded for quota metric 'Analysis requests (AnalyzeComment)' and limit 'Analysis requests (AnalyzeComment) per minute' of service 'commentanalyzer.googleapis.com' for consumer 'project_number:999858186770'.",
+    status: 'RESOURCE_EXHAUSTED',
+    details: [ [Object], [Object] ]
+  }
+}
+Error processing the message:  ReferenceError: sendMessageWithDelay is not defined
+    at Client.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/app.js:59:5)
+    at Client.emit (node:events:519:28)
+    at MessageCreateAction.handle (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/actions/MessageCreate.js:28:14)
+    at module.exports [as MESSAGE_CREATE] (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/handlers/MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/discord.js/src/client/websocket/WebSocketManager.js:232:12)
+    at WebSocketManager.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.<anonymous> (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1190:51)
+    at WebSocketShard.emit (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@vladfrangu/async_event_emitter/dist/index.cjs:287:31)
+    at WebSocketShard.onMessage (/Users/shubhamishra/Desktop/VT-HACKS-CIT-APP/discord-bot/node_modules/@discordjs/ws/dist/index.js:1005:14)
