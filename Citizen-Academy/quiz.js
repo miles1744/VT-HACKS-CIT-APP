@@ -19,10 +19,12 @@ axios.get(url)
         const text = $('p').text();
         console.log(text);
 
+        /*
         $('p').each(index, element) => {
             const text = $(element).text();
             console.log(text)
         }
+        */
     })
 
 
