@@ -64,10 +64,7 @@ client.on('messageCreate', async (message) => {
     await sendMessageWithDelay(message.channel,`Hey, ${message.author}!`);
   }
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
   const content = message.content;
   const scores = await analyzeMessage(content);
 
