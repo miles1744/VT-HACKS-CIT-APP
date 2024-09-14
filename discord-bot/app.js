@@ -55,7 +55,7 @@ client.on('messageCreate', async (message) => {
   if (message.author.bot) return; // Ignore messages from bot
 
   if (message.content === 'hello'){
-    await sendMessageWithDelay(message.channel,'hey miles negesh thomas!');
+    await message.channel.send('hey miles negesh thomas!');
   }
 
 
@@ -74,7 +74,7 @@ client.on('messageCreate', async (message) => {
     await message.delete();
 
     // Send a warning message
-    sendMessageWithDelay(message.channel, `${message.author}, please refrain from using profanity.`);
+    message.channel.send(message.channel, `${message.author}, please refrain from using profanity.`);
   }
 
   if (toxicityScore > 0.2) {
@@ -82,7 +82,7 @@ client.on('messageCreate', async (message) => {
     await message.delete();
 
     // Send a warning message
-    sendMessageWithDelay(message.channel,`${message.author}, please refrain from using toxicity.`);
+    message.channel.send(message.channel,`${message.author}, please refrain from using toxicity.`);
   }
 });
 
