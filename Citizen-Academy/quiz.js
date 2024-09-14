@@ -4,6 +4,35 @@ function sayHello(name){
 
 sayHello('groupmates');
 
+const axios = require('axios');
+const cheerio = require('cheerio');
+const fs = require('fs');
+
+const url = 'https://www.uscis.gov/';
+
+const_questionData = {};
+
+
+axios.get(url)
+    .then(response => {
+        const $ = cheerio.load(response.data);
+        const text = $('p').text();
+        console.log(text);
+
+        $('p').each(index, element) => {
+            const text = $(element).text();
+            console.log(text)
+        }
+    })
+
+
+
+
+
+
+
+
+
 /*
 server.listen(defineConfig, function(error)){
 
@@ -38,3 +67,4 @@ Since immigration is a sensitive legal area, it’s important to include a discl
 the quiz is informational and not legal advice.
  You can recommend that users consult a licensed immigration attorney for legal advice.
 */
+
