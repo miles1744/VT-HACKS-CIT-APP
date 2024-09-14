@@ -4,7 +4,12 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const axios = require('axios');
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
+  intents: [
+    IntentsBitField.Flags.Guilds, 
+      IntentsBitField.Flags.GuildMembers,
+      IntentsBitField.Flags.GuildMessages,
+      IntentsBitField.Flags.MessageContent
+  ],
 });
 
 const DISCORD_API_KEY = process.env.DISCORD_API_KEY;
